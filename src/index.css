@@ -6,7 +6,9 @@
   background-color: #f63f73;
   color: white;
 }
-
+body {
+  cursor: none;
+}
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -274,13 +276,10 @@
   left: calc(50% - 1.25em);
 }
 .bg-pattern {
-  /* width: 100%;
-  height: 100%; */
-
   background: #000000;
   --gap: 5em;
   --line: 1px;
-  --color: rgba(255, 255, 255, 0.2);
+  --color: rgba(255, 255, 255, 0.1);
 
   background-image: linear-gradient(
       -90deg,
@@ -349,4 +348,16 @@
 .button-2:hover .button-2__icon-svg--copy {
   transition: transform 0.3s ease-in-out 0.1s;
   transform: translate(0);
+}
+
+.custom-cursor {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  /* background-color: purple; */
+  position: fixed;
+  pointer-events: none; /* Prevents the cursor from interfering with other elements */
+  transform: translate(-50%, -50%);
+  transition: background-color 3s cubic-bezier(0.23, 1, 0.320, 1), transform 0.2s;
+  z-index: 9999; /* Ensure it stays on top of other elements */
 }

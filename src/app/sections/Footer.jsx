@@ -26,7 +26,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer style={{ backgroundColor: "#1A1D2B" }}>
+    <footer  className="bg-black border-t-4 border-neutral-600/30">
       <div className="container mx-auto p-0 md:p-8 xl:px-0">
         <div className="mx-auto max-w-7xl px-6 pb-10 pt-16">
           <div className="xl:grid xl:grid-cols-3 xl:gap-8">
@@ -165,15 +165,15 @@ const Footer = () => {
           </div>
           <div className="mt-16 border-t border-gray-400/30 pt-8 sm:mt-20 lg:mt-24">
             <div className="text-md text-center text-white">
-              Copyright © 2024. Crafted
+              Copyright © 2024. developed
               <span className="text-gray-50 mx-1">by</span>
               <a
                 href="http://kibuti.co.tz"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-kingshare font-bold text-xl mx-1 text-white no-underline hover:no-underline hover:text-yellow-500"
+                className="font-mono sm:block md:inline font-bold text-xl mx-1 text-white no-underline hover:no-underline hover:text-purple-500"
               >
-                <span className="text-white hover:text-yellow-500 hover:font-redhat transition-all duration-500">kibuti software</span>
+                <span className="text-white hover:text-purple-500 hover:font-redhat transition-all duration-500">kibuti software</span>
               </a>
             </div>
           </div>

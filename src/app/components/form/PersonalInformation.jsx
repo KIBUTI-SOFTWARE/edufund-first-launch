@@ -1,11 +1,6 @@
 import React, { useState } from "react";
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/components/ui/tabs"
-function PersonalInformation({formData, handleChange}) {
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+function PersonalInformation({ formData, handleChange }) {
   // const [formData, setFormData] = useState({
   //   title: "",
   //   surname: "",
@@ -250,7 +245,7 @@ function PersonalInformation({formData, handleChange}) {
         <br />
         <br />
         {/* <TabsTrigger value="AcademicInformation"> */}
-        {/* <a className="button-2" href="#"> */}
+        <a className="button-2" href="#">
           <span className="button-2__icon-wrapper">
             <svg
               width="10"
@@ -279,7 +274,7 @@ function PersonalInformation({formData, handleChange}) {
             </svg>
           </span>
           Next
-        {/* </a> */}
+        </a>
         {/* </TabsTrigger> */}
       </form>
     </div>

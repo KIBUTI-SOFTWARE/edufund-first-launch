@@ -109,7 +109,7 @@ export const alerter = (message) => {
       onClick: () => console.log("continue"),
     },
     // dismissible: "true",
-    style: { borderWidth: "2px", borderColor: "green" },
+    style: { borderWidth: "1px", borderColor: "rgb(147 51 234 / 0.5)" ,backgroundColor:"#161617",color:"#fff"},
     important: "true"
   });
 };

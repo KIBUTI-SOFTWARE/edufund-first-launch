@@ -94,8 +94,8 @@ function TabsDemo() {
         </TabsContent>
       </Tabs>
       <div>
-        <div className="mt-4 mx-20">
-          <Button onClick={handleSubmit}>Save all changes</Button>
+        <div className="mt-4 w-full flex items-center justify-center my-4">
+          <Button onClick={handleSubmit} className="">Save all changes</Button>
         </div>
       </div>
     </div>

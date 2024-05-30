@@ -20,7 +20,7 @@ import { data } from "./../utils/index";
 import DonationForm from "../components/form/DonationForm";
 function Hero() {
   const [goal, setGoal] = React.useState(350);
-  
+
   function onClick(adjustment) {
     setGoal(Math.max(200, Math.min(400, goal + adjustment)));
   }
@@ -66,7 +66,7 @@ function Hero() {
           </div> */}
 
           <h1 className="mx-auto md:max-w-4xl font-display text-2xl md:text-5xl font-semibold tracking-normal text-white-300 dark:text-gray-300">
-           With the true spirit of ubuntu,we're bringing quality Education
+            With the true spirit of ubuntu,we're bringing quality Education
             <span className="relative whitespace-nowrap text-white-600 mx-1 dark:text-gray-300">
               to Africa's most
             </span>
@@ -83,9 +83,10 @@ function Hero() {
             </span>
           </h1>
           <h2 className="mx-auto mt-12 max-w-xl text-lg sm:text-white-400 text-white-500 dark:text-gray-300 leading-7">
-            Edufund is helping more underrepresented African descents to access competitive education through community financing
+            Edufund is helping more underrepresented African descents to access
+            competitive education through community financing
           </h2>
-          <Drawer>
+          <Drawer className="bg-neutral-800 border-none outline-none">
             <DrawerTrigger asChild>
               <button className="button mt-4">
                 Donate now
@@ -98,7 +99,7 @@ function Hero() {
                 </svg>
               </button>
             </DrawerTrigger>
-            <DrawerContent>
+            <DrawerContent className="bg-neutral-800 border-none outline-none">
               <div className="mx-auto w-full">
                 <DonationForm />
               </div>

@@ -9,6 +9,8 @@ import Footer from "../sections/Footer";
 import Gallery from "../sections/Gallery";
 import PieChartFunctional from "../sections/Stats";
 import Testimonials from "../sections/Testimonials";
+import { TestimonialCard2 } from "../components/TestimonialCard";
+import CustomCursor from "../components/CustomCursor";
 function Home() {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -27,14 +29,22 @@ function Home() {
           <About />
           <PieChartFunctional />
           <Articles />
+          {/* <TestimonialCard2
+            initialStars={3}
+            name="Melissa Smith"
+            message="I've been using XYZ for over a year now and their customer service is excellent! Whenever I have a question, the team is always available and willing to help. Highly recommend!"
+            image="https://randomuser.me/api/portraits/women/2.jpg"
+            position="Marketing Manager"
+          /> */}
           <Testimonials />
-          {/* <Gallery /> */}
+          <Gallery />
           {/* <Form /> */}
           {/* <Form2 /> */}
           <Faqs />
           {/* <DrawerDemo/> */}
           <Footer />
           <Toaster />
+          <CustomCursor />
         </div>
       )}
     </>
