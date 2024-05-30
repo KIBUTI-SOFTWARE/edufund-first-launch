@@ -12,7 +12,7 @@ export function Faqs() {
       <Accordion
         type="single"
         collapsible
-        className="w-[90%] mx-[3%] px-[2%] md:w-[70%] md:mx-[14%] md:px-[1%] my-8 backdrop-blur-lg bg-blue-100/5"
+        className="w-[90%] mx-[5%] md:w-[70%] md:mx-[14%] md:px-[1%] my-8 backdrop-blur-lg bg-blue-100/5"
       >
         {faqs.map((faq) => (
           <AccordionItem value={faq.question} key={faq.id}>

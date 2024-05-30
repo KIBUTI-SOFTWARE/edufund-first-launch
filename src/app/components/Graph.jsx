@@ -2,10 +2,9 @@ import React, { useCallback, useState } from "react";
 import { PieChart, Pie, Sector } from "recharts";
 
 const data = [
-  { name: "Donated", value: 400 },
-  { name: "Remaining", value: 300 },
-//   { name: "Group C", value: 300 },
-//   { name: "Group D", value: 200 },
+  { name: "Donated", value: 1000 },
+  { name: "Remaining", value: 9000 },
+
 ];
 
 const renderActiveShape = ({
@@ -67,7 +66,7 @@ const renderActiveShape = ({
         y={ey}
         textAnchor={textAnchor}
         fill="#e6e6e6"
-      >{`PV ${value}`}</text>
+      >{`£ ${value/1000} k`}</text>
       <text
         x={ex + (cos >= 0 ? 1 : -1) * 12}
         y={ey}
@@ -75,7 +74,7 @@ const renderActiveShape = ({
         textAnchor={textAnchor}
         fill="#0076ff"
       >
-        {`(Rate ${(percent * 100).toFixed(2)}%)`}
+        {/* {`(Rate ${(percent * 100).toFixed(2)}%)`} */}
       </text>
     </g>
   );
@@ -91,15 +90,15 @@ export default function Graph() {
   );
 
   return (
-    <PieChart width={350} height={400}>
+    <PieChart width={320} height={400} >
       <Pie
         activeIndex={activeIndex}
         activeShape={renderActiveShape}
         data={data}
-        cx={200}
+        cx={155}
         cy={200}
-        innerRadius={60}
-        outerRadius={80}
+        innerRadius={50}
+        outerRadius={60}
         fill="#fff"
         dataKey="value"
         onMouseEnter={onPieEnter}

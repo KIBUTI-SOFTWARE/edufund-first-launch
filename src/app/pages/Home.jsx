@@ -15,7 +15,7 @@ function Home() {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 5 * 1000);
+    }, 3 * 1000);
   }, []);
 
   return (
@@ -28,7 +28,7 @@ function Home() {
           <PieChartFunctional />
           <Articles />
           <Testimonials />
-          <Gallery />
+          {/* <Gallery /> */}
           {/* <Form /> */}
           {/* <Form2 /> */}
           <Faqs />

@@ -21,19 +21,19 @@ function Stats() {
           </p>
           <ul className="text-slate-200 mb-4">
             <li className="mb-2">
-              <strong>Total Funds Raised:</strong> $500,000
+              <strong>Total Funds Raised:</strong> £10,000
             </li>
             <li className="mb-2">
-              <strong>Funds Disbursed:</strong> $350,000
+              <strong>Funds Disbursed:</strong> £1,000
             </li>
             <li className="mb-2">
-              <strong>Remaining Funds:</strong> $150,000
+              <strong>Remaining Funds:</strong> £9,000
             </li>
             <li className="mb-2">
-              <strong>Number of Scholarships Awarded:</strong> 75
+              <strong>Number of Scholarships:</strong> 1
             </li>
             <li className="mb-2">
-              <strong>Average Scholarship Amount:</strong> $4,666
+              <strong>Average Scholarship Amount:</strong> £1,000
             </li>
           </ul>
           {/* <img src={student} alt="Student" className="w-48 h-auto md:hidden" /> */}

@@ -1,20 +1,20 @@
 import React from 'react';
 
-const Card = ({ image, category, title, description, timeAgo, comments }) => (
+const Card = ({ image, category, title, description, timeAgo, comments ,source}) => (
   <div className="rounded-xl overflow-hidden shadow-lg flex flex-col bg-slate-200">
     <div className="relative">
-      <a href="#">
+      <a href={source}>
         <img className="w-full h-44 object-cover" src={image} alt={title} />
         <div className="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-900 opacity-25"></div>
       </a>
-      <a href="#!">
+      <span>
         <div className="text-xs absolute top-0 right-0 bg-indigo-600 rounded-full px-4 py-2 text-white mt-3 mr-3 hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
           {category}
         </div>
-      </a>
+      </span>
     </div>
     <div className="px-6 py-4 mb-auto">
-      <a href="#" className="font-medium text-lg text-black  hover:text-indigo-600 transition duration-500 ease-in-out inline-block mb-2">
+      <a href={source} target='_top' className="font-medium text-lg text-black  hover:text-indigo-600 transition duration-500 ease-in-out inline-block mb-2">
         {title}
       </a>
       <p className="text-gray-500 text-sm">{description}</p>
@@ -35,7 +35,7 @@ const Card = ({ image, category, title, description, timeAgo, comments }) => (
         <svg className="h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
         </svg>
-        <span className="ml-1">{comments} Comments</span>
+        <span className="ml-1">No comments</span>
       </span>
     </div>
   </div>
@@ -44,28 +44,31 @@ const Card = ({ image, category, title, description, timeAgo, comments }) => (
 const Articles = () => {
   const cardsData = [
     {
-      image: "https://images.pexels.com/photos/3184298/pexels-photo-3184298.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      category: "Scholarship",
-      title: "Top 10 Scholarships for International Students",
-      description: "Explore the best scholarships available for international students in various countries.",
-      timeAgo: "1 day ago",
+      image: "https://blogs.worldbank.org/content/dam/sites/blogs/img/detail/mgr/mother_and_daughter_hero_image.jpg",
+      category: "Develeopment talk",
+      title: "The high price of education in Sub-Saharan Africa",
+      description: "The promise of universal primary and secondary education is one of the Sustainable Development Goals. Yet in 2020, about 64 million..",
+      timeAgo: "Mar 13, 2023",
       comments: 45,
+      url:"https://blogs.worldbank.org/en/developmenttalk/high-price-education-sub-saharan-africa"
     },
     {
-      image: "https://images.pexels.com/photos/4145199/pexels-photo-4145199.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      category: "Scholarship",
-      title: "How to Write a Winning Scholarship Essay",
-      description: "Tips and tricks on crafting an essay that stands out in scholarship applications.",
-      timeAgo: "3 days ago",
+      image: "https://thepienews.b-cdn.net/wp-content/uploads/2024/02/Screenshot-2024-02-12-at-15.29.45-2.jpeg",
+      category: "Reality check",
+      title: "Reality check: the hidden price of UK education",
+      description: "Since the start of my journey to the UK as an international student, there has been noticeable..",
+      timeAgo: "February 26 2024",
       comments: 12,
+      url:"https://thepienews.com/reality-check-the-hidden-price-of-uk-education/"
     },
     {
-      image: "https://images.pexels.com/photos/5077053/pexels-photo-5077053.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      category: "Scholarship",
-      title: "Scholarship Opportunities for STEM Students",
-      description: "Discover various scholarship opportunities specifically for students in STEM fields.",
-      timeAgo: "5 hours ago",
+      image: "https://thewhistler.ng/wp-content/uploads/2024/05/Teesside-University-students-protesting-on-campus.jpg",
+      category: "financial crisis",
+      title: "Nigerian Students Kicked Out Of UK University Due To Currency Crisis",
+      description: "A financial crisis in Nigeria has resulted in a heartbreaking situation for dozens of Nigerian students..",
+      timeAgo: "May 22, 2024",
       comments: 20,
+      url:"https://thewhistler.ng/nigerian-students-kicked-out-of-uk-university-due-to-currency-crisis/"
     },
   ];
 
@@ -86,7 +89,7 @@ const Articles = () => {
           Most Popular
         </div>
         {/* <div className="flex items-center uppercase">
-          <a href="#" className="text-slate-100">View All</a>
+          <a href={source} className="text-slate-100">View All</a>
           <svg className="h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
           </svg>
@@ -103,6 +106,7 @@ const Articles = () => {
             description={card.description}
             timeAgo={card.timeAgo}
             comments={card.comments}
+            source={card.url}
           />
         ))}
       </div>
