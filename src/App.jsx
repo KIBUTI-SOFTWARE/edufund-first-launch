@@ -23,10 +23,10 @@ function App() {
   return (
     <Routes className="bg-pattern">
       <Route path="/" element={<Home />} />
-      <Route path="/Apply" element={<ApplyForScholarship />} />
+      {/* <Route path="/Apply" element={<ApplyForScholarship />} />
       <Route path="/Eligibility" element={<Eligibility />} />
       <Route path="/Scholarships" element={<Scholarships />} />
-      <Route path="/success-stories" element={<Stories />} />
+      <Route path="/success-stories" element={<Stories />} /> */}
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

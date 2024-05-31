@@ -94,12 +94,13 @@ function Nav() {
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <NavLink
-            to={"/register"}
+          <a
+            href="https://edufunddash.kibuti.co.tz/register"
+            target="_blank"
             className="text-sm font-semibold leading-6 text-white"
           >
             Log in <span aria-hidden="true">&rarr;</span>
-          </NavLink>
+          </a>
         </div>
       </nav>
       <Dialog
