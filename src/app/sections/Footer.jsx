@@ -183,7 +183,7 @@ const Footer = () => {
                 className="font-mono sm:block md:inline font-bold text-xl mx-1 text-white no-underline hover:no-underline hover:text-purple-500"
               >
                 <span className="text-white hover:text-purple-500 hover:font-redhat transition-all duration-500 capitalize">
-                  kibuti software
+                  Kibuti Software
                 </span>
               </a>
             </div>
