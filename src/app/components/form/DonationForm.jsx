@@ -1,7 +1,12 @@
 import React from "react";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { alerter } from "@/app/utils";
+import { alerter, sendEmail } from "@/app/utils";
+
 function DonationForm() {
+  const send = async () => {
+    await sendEmail();
+  };
+
   return (
     <>
       <ScrollArea className="h-[36rem] border-none w-full rounded-md border">
@@ -181,7 +186,12 @@ function DonationForm() {
               <div className="mt-8 flex flex-col-reverse gap-y-4 md:gap-y-0 md:flex-row items-center justify-evenly">
                 <button
                   className="bg-purple-600/50 text-white px-12 md:px-6 py-3 rounded-lg font-semibold shadow-lg transform transition-transform hover:scale-105 hover:bg-neutral-700/30 dark:bg-teal-600 dark:text-white dark:hover:bg-teal-900 flex items-center"
-                  onClick={()=>alerter('Thank you for your pledge. You can redeem your pledge through this payment link')}
+                  onClick={() =>
+                    // alerter(
+                    //   "Thank you for your pledge. You can redeem your pledge through this payment link"
+                    // )
+                    send
+                  }
                 >
                   <svg
                     className="w-5 h-5 mr-2"

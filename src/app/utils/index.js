@@ -1,4 +1,5 @@
 import { toast } from "sonner"
+import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 
 export const testimonials = [
   {
@@ -109,7 +110,26 @@ export const alerter = (message) => {
       onClick: () => console.log("continue"),
     },
     // dismissible: "true",
-    style: { borderWidth: "1px", borderColor: "rgb(147 51 234 / 0.5)" ,backgroundColor:"#161617",color:"#fff"},
+    style: { borderWidth: "1px", borderColor: "rgb(147 51 234 / 0.5)", backgroundColor: "#161617", color: "#fff" },
     important: "true"
   });
 };
+export const sendEmail = async () => {
+  try {
+    await emailjs.send(
+      // 'service_19kb6ls',
+      'service_1x4nkct',
+      'template_zaav4mk',
+      {},
+
+    );
+    console.log('SUCCESS!');
+  } catch (err) {
+    if (err instanceof EmailJSResponseStatus) {
+      console.log('EMAILJS FAILED...', err);
+      return;
+    }
+
+    console.log('ERROR', err);
+  }
+}

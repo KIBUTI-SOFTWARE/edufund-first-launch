@@ -7,7 +7,7 @@ import SkeletonCard from "../components/SkeletonCard"; // Ensure you have this e
 
 function Testimonials() {
   const [isLoading, setIsLoading] = useState(true);
-  const TIMEOUT = 15;
+  const TIMEOUT = 1000;
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);

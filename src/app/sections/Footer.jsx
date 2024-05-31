@@ -4,21 +4,21 @@ import {MailIcon} from 'lucide-react';
 
 const Footer = () => {
   const scholarshipLinks = [
-    { to: "/apply", text: "Apply Now" },
-    { to: "/eligibility", text: "Eligibility Criteria" },
-    { to: "/guidelines", text: "Application Guidelines" },
+    { to: "#/apply", text: "Apply Now" },
+    { to: "#/eligibility", text: "Eligibility Criteria" },
+    { to: "#/guidelines", text: "Application Guidelines" },
   ];
 
   const resourcesLinks = [
-    { to: "/faqs", text: "FAQs" },
-    { to: "/scholarships", text: "Financial Support" },
-    { to: "/success-stories", text: "Success Stories" },
+    { to: "#/faqs", text: "FAQs" },
+    { to: "#/scholarships", text: "Financial support" },
+    { to: "#/success-stories", text: "Success stories" },
   ];
 
   const aboutLinks = [
-    { to: "/about-us", text: "About Us" },
-    { to: "/contact", text: "Contact Us" },
-    { to: "/team", text: "Our Team" },
+    { to: "#/about-us", text: "About Us" },
+    { to: "#/contact", text: "Contact Us" },
+    { to: "#/team", text: "Our Team" },
   ];
 
   const policyLinks = [

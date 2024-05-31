@@ -5,11 +5,11 @@ import { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const navigation = [
-  { name: "Apply Now", href: "/apply" },
-  { name: "Eligibility Criteria", href: "/eligibility" },
-  { name: "Fund Packages", href: "/scholarships" },
-  { name: "Success Stories", href: "/success-stories" },
-  { name: "FAQs", href: "/faqs" },
+  { name: "Apply Now", href: "#/apply" },
+  { name: "Eligibility Criteria", href: "#/eligibility" },
+  { name: "Fund Packages", href: "#/scholarships" },
+  { name: "Success Stories", href: "#/success-stories" },
+  { name: "FAQs", href: "#/faqs" },
   { name: "Contact Us", href: "#contact" },
 ];
 function Nav() {
@@ -24,13 +24,13 @@ function Nav() {
   const getGreetingAndIcon = () => {
     const hours = new Date().getHours();
     if (hours < 12) {
-      return { greeting: "Good Morning", icon: "☀️" }; // Sun icon for morning
+      return { greeting: "Good Morning", icon: "☀️" };  
     } else if (hours < 18) {
-      return { greeting: "Good Afternoon", icon: "🌤️" }; // Sun with rays icon for afternoon
+      return { greeting: "Good Afternoon", icon: "🌤️" }; 
     } else if (hours < 21) {
-      return { greeting: "Good Evening", icon: "🌇" }; // Sunset icon for evening
+      return { greeting: "Good Evening", icon: "🌇" }; 
     } else {
-      return { greeting: "Good Night", icon: "🌙" }; // Moon icon for night
+      return { greeting: "Good Night", icon: "🌙" }; 
     }
   };
 

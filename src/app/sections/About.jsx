@@ -20,9 +20,10 @@ function About() {
           Why Our Financial Support Program Stands Out
         </h2>
         <p className="max-w-md mx-auto mt-2 text-gray-300">
-          Our financial support program is designed to support and empower
-          African students at home and abroad to achieve their educational
-          goals.
+          Join our mission to widen access to education for Africa's future
+          talent. Donate to our Ubuntu Community Fund to help us provide funds
+          to support African students at home and abroad to achieve their
+          educational goals
         </p>
       </div>
 
