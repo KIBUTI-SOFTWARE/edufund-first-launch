@@ -12,10 +12,10 @@ function Stats() {
       <section className="md:w-[80%] box-border px-4 py-4 md:mx-[10%] flex flex-col md:flex-row items-center justify-center bg-slate-800/70 backdrop-blur-sm my-12 rounded-3xl">
         <div className="flex flex-col pl-4 items-center md:items-start md:w-1/2">
           <h2 className="text-2xl font-semibold mb-2 text-white font-redhat">
-            Scholarship Fund Statistics
+          Fund Disbursement Statistics
           </h2>
           <p className="text-slate-100 mb-4">
-            Our scholarship program has been highly successful, providing
+            Our Financial Support program has been highly successful, providing
             essential financial support to numerous students. Here are the
             current statistics on the funds raised versus the funds remaining:
           </p>
@@ -30,10 +30,10 @@ function Stats() {
               <strong>Remaining Funds:</strong> £9,000
             </li>
             <li className="mb-2">
-              <strong>Number of Scholarships:</strong> 1
+              <strong>Funds Awarded:</strong> 1
             </li>
             <li className="mb-2">
-              <strong>Average Scholarship Amount:</strong> £1,000
+              <strong>Average Fund Value:</strong> £1,000
             </li>
           </ul>
           {/* <img src={student} alt="Student" className="w-48 h-auto md:hidden" /> */}

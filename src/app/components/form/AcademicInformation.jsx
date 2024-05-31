@@ -229,7 +229,7 @@ function AcademicInformation({ formData, handleChange }) {
           By signing below, I certify that all information provided in this
           application is complete and accurate to the best of my knowledge. I
           understand that falsified statements could result in the termination
-          of any scholarship awarded.
+          of any financial support awarded.
         </p>
         <label className="text-white" htmlFor="cert_name">
           Name:

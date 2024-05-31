@@ -21,7 +21,7 @@ function Testimonials() {
       <h1 className="text-center my-12 text-3xl font-kingshare font-bold">
         What people are saying about us
       </h1>
-      <div className="xl:w-[90%] xl:mx-[5%] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div className="xl:w-[90%] xl:mx-[5%] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 snap">
         {isLoading
           ? Array.from({ length: testimonials.length }).map((_, index) => (
               <div className="xs:ml-12 sm:ml-0">

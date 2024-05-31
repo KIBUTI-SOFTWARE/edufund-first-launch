@@ -7,10 +7,10 @@ import { NavLink } from "react-router-dom";
 const navigation = [
   { name: "Apply Now", href: "/apply" },
   { name: "Eligibility Criteria", href: "/eligibility" },
-  { name: "Available Scholarships", href: "/scholarships" },
+  { name: "Fund Packages", href: "/scholarships" },
   { name: "Success Stories", href: "/success-stories" },
   { name: "FAQs", href: "/faqs" },
-  { name: "Contact Us", href: "/contact" },
+  { name: "Contact Us", href: "#contact" },
 ];
 function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

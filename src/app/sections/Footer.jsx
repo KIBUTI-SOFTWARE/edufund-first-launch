@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import {MailIcon} from 'lucide-react';
 
 const Footer = () => {
   const scholarshipLinks = [
@@ -10,7 +11,7 @@ const Footer = () => {
 
   const resourcesLinks = [
     { to: "/faqs", text: "FAQs" },
-    { to: "/scholarships", text: "Available Scholarships" },
+    { to: "/scholarships", text: "Financial Support" },
     { to: "/success-stories", text: "Success Stories" },
   ];
 
@@ -26,7 +27,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer  className="bg-black border-t-4 border-neutral-600/30">
+    <footer className="bg-black border-t-4 border-neutral-600/30"  id="contact">
       <div className="container mx-auto p-0 md:p-8 xl:px-0">
         <div className="mx-auto max-w-7xl px-6 pb-10 pt-16">
           <div className="xl:grid xl:grid-cols-3 xl:gap-8">
@@ -49,7 +50,7 @@ const Footer = () => {
               </div>
               <div className="max-w-md pr-16 text-md text-gray-200">
                 Empowering students to achieve their dreams through
-                comprehensive scholarship opportunities and resources.
+                comprehensive Financial Support opportunities and resources.
               </div>
               <div className="flex space-x-2">
                 <a
@@ -86,13 +87,21 @@ const Footer = () => {
                     <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
                   </svg>
                 </a>
+                <a
+                  href="mailto:partnerships@edufunds.co"
+                  target="_blank"
+                  className="text-gray-200 hover:text-gray-200"
+                >
+                  <span className="sr-only">Email</span>
+                 <MailIcon/>
+                </a>
               </div>
             </div>
             <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
               <div className="md:grid md:grid-cols-2 md:gap-8">
                 <div>
                   <h3 className="text-md font-semibold leading-6 text-white">
-                    Scholarships
+                    Financial Support
                   </h3>
                   <ul role="list" className="mt-6 space-y-4">
                     {scholarshipLinks.map((link) => (
@@ -173,7 +182,9 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="font-mono sm:block md:inline font-bold text-xl mx-1 text-white no-underline hover:no-underline hover:text-purple-500"
               >
-                <span className="text-white hover:text-purple-500 hover:font-redhat transition-all duration-500">kibuti software</span>
+                <span className="text-white hover:text-purple-500 hover:font-redhat transition-all duration-500 capitalize">
+                  kibuti software
+                </span>
               </a>
             </div>
           </div>

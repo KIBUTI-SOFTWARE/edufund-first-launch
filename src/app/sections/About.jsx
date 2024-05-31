@@ -17,11 +17,12 @@ function About() {
       </div>
       <div className="text-center">
         <h2 className="font-semibold font-kingshare text-3xl">
-          Why Our Scholarship Program Stands Out
+          Why Our Financial Support Program Stands Out
         </h2>
         <p className="max-w-md mx-auto mt-2 text-gray-300">
-          Our scholarship program is designed to support and empower students
-          from all backgrounds to achieve their educational goals.
+          Our financial support program is designed to support and empower
+          African students at home and abroad to achieve their educational
+          goals.
         </p>
       </div>
 
@@ -47,8 +48,8 @@ function About() {
           <div>
             <h3 className="font-semibold text-xl">Comprehensive Support</h3>
             <p className="mt-1 text-slate-300">
-              Our scholarship program includes a support system to help students
-              navigate their academic journey.
+              Our financial support program includes a support system to help
+              students navigate their academic journey.
             </p>
           </div>
         </div>
@@ -74,9 +75,9 @@ function About() {
           <div>
             <h3 className="font-semibold text-xl">Diverse Opportunities</h3>
             <p className="mt-1 text-slate-300">
-              We offer a range of scholarships tailored to different fields of
-              study, ensuring that every student can find support that fits
-              their needs.
+              We offer a range of financial supports tailored to different
+              fields of study, ensuring that every student can find support that
+              fits their needs.
             </p>
           </div>
         </div>
@@ -137,7 +138,7 @@ function About() {
           <div>
             <h3 className="font-semibold text-xl">Community Engagement</h3>
             <p className="mt-1 text-slate-300">
-              We encourage our scholarship recipients to give back to the
+              We encourage our financial support recipients to give back to the
               community, fostering a cycle of support and growth.
             </p>
           </div>
