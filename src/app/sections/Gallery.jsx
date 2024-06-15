@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Terminal,BadgeInfo } from "lucide-react";
-
+import frame from "../../assets/images/PC.png"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 function Gallery() {
   return (

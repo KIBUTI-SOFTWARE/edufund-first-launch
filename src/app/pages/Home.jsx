@@ -11,6 +11,10 @@ import PieChartFunctional from "../sections/Stats";
 import Testimonials from "../sections/Testimonials";
 import { TestimonialCard2 } from "../components/TestimonialCard";
 import CustomCursor from "../components/CustomCursor";
+import Team from "../sections/Team";
+import ProfileCard from "../components/ProfileCard";
+import Partners from "../components/Partners";
+
 function Home() {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -36,10 +40,13 @@ function Home() {
             image="https://randomuser.me/api/portraits/women/2.jpg"
             position="Marketing Manager"
           /> */}
-          <Testimonials />
+          <Team />
+          {/* <ProfileCard/> */}
+          {/* <Testimonials /> */}
           <Gallery />
           {/* <Form /> */}
           {/* <Form2 /> */}
+          <Partners/>
           <Faqs />
           {/* <DrawerDemo/> */}
           <Footer />

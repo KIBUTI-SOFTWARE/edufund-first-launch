@@ -5,12 +5,12 @@ import { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const navigation = [
-  { name: "Apply Now", href: "#/apply" },
-  { name: "Eligibility Criteria", href: "#/eligibility" },
-  { name: "Fund Packages", href: "#/scholarships" },
-  { name: "Success Stories", href: "#/success-stories" },
-  { name: "FAQs", href: "#/faqs" },
-  { name: "Contact Us", href: "#contact" },
+  { name: "Apply Now", href: "/apply" },
+  { name: "About us", href: "/eligibility" },
+  { name: "Products", href: "/scholarships" },
+  { name: "Donate", href: "/success-stories" },
+  { name: "Reports", href: "/faqs" },
+  // { name: "Fundraiser", href: "/fundraiser" },
 ];
 function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -46,7 +46,7 @@ function Nav() {
     }, []);
 
     return (
-      <div className="font-redhat text-white rounded-full shadow-md text-lg flex items-center">
+      <div className="font-redhat text-white rounded-full text-lg flex items-center">
         <span className="mr-2">{greetingData.icon}</span>
         {greetingData.greeting}
       </div>

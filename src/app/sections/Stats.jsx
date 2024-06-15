@@ -9,10 +9,12 @@ function Stats() {
       <h1 className="text-center text-3xl font-kingshare font-bold">
         What we've achieved
       </h1>
-      <section className="md:w-[80%] box-border px-4 py-4 md:mx-[10%] flex flex-col md:flex-row items-center justify-center bg-slate-800/70 backdrop-blur-sm my-12 rounded-3xl">
+      <section
+        className="md:w-[80%] box-border px-4 py-4 md:mx-[10%] flex flex-col md:flex-row items-center justify-center bg-slate-800/70 backdrop-blur-sm my-12 rounded-3xl"
+      >
         <div className="flex flex-col pl-4 items-center md:items-start md:w-1/2">
           <h2 className="text-2xl font-semibold mb-2 text-white font-redhat">
-          Fund Disbursement Statistics
+            Fund Disbursement Statistics
           </h2>
           <p className="text-slate-100 mb-4">
             Our Financial Support program has been highly successful, providing

@@ -76,6 +76,7 @@ module.exports = {
         barlow: ['barlow', 'sans-serif'],
         redhat: ['red-hat', 'sans-serif'],
       },
+
     },
   },
   plugins: [require("tailwindcss-animate")],
