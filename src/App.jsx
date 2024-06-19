@@ -8,6 +8,9 @@ import NotFound from "./app/pages/NotFound";
 import { useEffect } from "react";
 import Fundraiser from "./app/pages/Fundraiser";
 import CustomCursor from "./app/components/CustomCursor";
+import About from "./app/pages/About";
+import Donation from "./app/pages/Donation";
+import Reports from "./app/pages/Reports";
 function App() {
   useEffect(() => {
     const handleContextMenu = (e) => {
@@ -23,16 +26,16 @@ function App() {
 
   return (
     <>
-    <Routes className="bg-pattern">
-      <Route path="/" element={<Home />} />
-      <Route path="/Apply" element={<ApplyForScholarship />} />
-      <Route path="/Eligibility" element={<Eligibility />} />
-      <Route path="/Scholarships" element={<Scholarships />} />
-      <Route path="/success-stories" element={<Stories />} />
-      <Route path="*" element={<NotFound />} />
-      <Route path="/fundraiser" element={<Fundraiser />} />
-    </Routes>
-    <CustomCursor/>
+      <Routes className="bg-pattern">
+        <Route path="/" element={<Home />} />
+        <Route path="/Apply" element={<ApplyForScholarship />} />
+        <Route path="/About" element={<About />} />
+        <Route path="/Donation" element={<Donation />} />
+        <Route path="/Reports" element={<Reports />} />
+        <Route path="*" element={<NotFound />} />
+        <Route path="/fundraiser" element={<Fundraiser />} />
+      </Routes>
+      <CustomCursor />
     </>
   );
 }

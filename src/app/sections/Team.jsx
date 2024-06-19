@@ -72,7 +72,7 @@ function Team() {
     const handleScroll = () => {
       const scrollY = window.scrollY;
       controls.start({
-        x: -scrollY * 0.2,
+        x: -scrollY * 0.05,
         transition: { type: "tween", ease: "easeOut", duration: 0.5 },
       });
     };
@@ -107,7 +107,7 @@ function Team() {
               animate={controls}
               drag="x"
               dragConstraints={{ left: -300, right: 0 }}
-              dragSnapToOrigin={true}
+              // dragSnapToOrigin={true}
               dragElastic={2}
             >
               {teamMembers.map((member, index) => (

@@ -14,6 +14,8 @@ import CustomCursor from "../components/CustomCursor";
 import Team from "../sections/Team";
 import ProfileCard from "../components/ProfileCard";
 import Partners from "../components/Partners";
+import VideoWidget from "../components/VideoWidget";
+import { HowWeAreShapingEducation } from "../sections/HowWeAreShapingEducation";
 
 function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -28,10 +30,11 @@ function Home() {
     <>
       {isLoading && <Loader />}
       {!isLoading && (
-        <div className="bg-pattern text-white px-2">
+        <div className="bg-pattern-bricks text-white px-2">
           <Navbar />
           <About />
           <PieChartFunctional />
+          <HowWeAreShapingEducation />
           <Articles />
           {/* <TestimonialCard2
             initialStars={3}
@@ -46,7 +49,7 @@ function Home() {
           <Gallery />
           {/* <Form /> */}
           {/* <Form2 /> */}
-          <Partners/>
+          <Partners />
           <Faqs />
           {/* <DrawerDemo/> */}
           <Footer />

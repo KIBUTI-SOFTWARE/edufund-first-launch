@@ -65,7 +65,7 @@ function Hero() {
             </div>
           </div> */}
 
-          <h1 className="mx-auto md:max-w-4xl font-display text-xl md:text-5xl font-semibold tracking-normal text-white-300 dark:text-gray-300">
+          <h1 className="mx-auto md:max-w-4xl font-display text-lg md:text-5xl font-semibold tracking-normal text-white-300 dark:text-gray-300">
             Harnessing the spirit of Ubuntu. <br />
             <span className="relative whitespace-nowrap text-white-600 mx-1 dark:text-gray-300">
             We're supporting Africa's promising students  <br /> to achieve their study goals
