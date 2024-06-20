@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { alerter } from "@/app/utils";
 import CountrySelector from "../CountrySelector";
@@ -6,70 +6,80 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import axios from "axios";
+import { BASE_URL } from "./../../utils/index";
+// Define Zod schema for form validation
+const FormSchema = z.object({
+  firstName: z.string().nonempty("First name is required"),
+  lastName: z.string().nonempty("Last name is required"),
+  email: z.string().email("Invalid email address"),
+  phone: z.string().nonempty("Phone number is required"),
+  address: z.string().nonempty("Address is required"),
+  state: z.string().nonempty("State is required"),
+  zip: z.string().nonempty("Postal code is required"),
+  amount: z.string().nonempty("Amount is required"),
+  currency: z.string().nonempty("Currency is required"),
+  countryCode: z.string().nonempty("Country code is required"),
+});
+
+// Function to submit form data to the API using axios
+
+const submitFormData = async (data) => {
+  try {
+    const response = await axios.post(
+      BASE_URL,
+      {
+        amount: data.amount,
+        currency: "USD",
+        firstName: data.firstName,
+        lastName: data.lastName,
+        email: data.email,
+        phoneNo: data.phone,
+        address: data.address,
+        countryCode: data.countryCode,
+        postalCode: data.zip,
+      },
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+
+    return response.data;
+  } catch (error) {
+    throw new Error("Failed to submit form data");
+  }
+};
 
 function DonationForm() {
-  const FormSchema = z.object({
-    firstName: z.string().nonempty("First name is required"),
-    lastName: z.string().nonempty("Last name is required"),
-    email: z.string().email("Invalid email address"),
-    phone: z.string().nonempty("Phone number is required"),
-    address: z.string().nonempty("Address is required"),
-    state: z.string().nonempty("State is required"),
-    zip: z.string().nonempty("Postal code is required"),
-    amount: z.string().nonempty("Amount is required"),
-    currency: z.string().nonempty("Currency is required"),
-    countryCode: z.string().nonempty("Country code is required"),
-  });
+  const [dialCode, setDialCode] = useState("");
+  const [countryCode, setCountryCode] = useState("");
 
-  const submitFormData = async (data) => {
-    try {
-      const response = await axios.post(
-        "https://edufunddash.kibuti.co.tz/api/card-payment",
-        {
-          amount: data.amount,
-          currency: data.currency,
-          firstName: data.firstName,
-          lastName: data.lastName,
-          email: data.email,
-          phoneNo: data.phone,
-          address: data.address,
-          countryCode: data.countryCode,
-          postalCode: data.zip,
-        },
-
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
-
-      console.log("form submitted successfully:", response.data);
-      return response.data;
-    } catch (error) {
-      console.log("An error occured:", response.error.data);
-      throw new Error("Failed to submit form data");
-    }
-  };
   // Set up useForm hook with zodResolver
   const form = useForm({
     resolver: zodResolver(FormSchema),
   });
 
   // Handle form submission
-  const onSubmit = async (event, data) => {
-    event.preventDefault(); // Prevent default form submission
+  const onSubmit = async (e, data) => {
+    e.preventDefault();
     try {
-      const result = await submitFormData(data);
+      const formData = { ...data, countryCode };
+      const result = await submitFormData(formData);
       alerter(
-        "Thank you for your pledge. You can redeem your pledge through this link"
+        "Thank you for your pledge. You can redeem your pledge through this payment link"
       );
+      console.log("the data is:" + JSON.stringify(result));
       console.log(result);
-      form.reset();
     } catch (error) {
       console.error(error);
-      alerter("Failed to submit form. Please try again.");
+      alerter(error);
     }
+  };
+
+  const handleCountryChange = (selectedDialCode, selectedCountryCode) => {
+    setDialCode(selectedDialCode);
+    setCountryCode(selectedCountryCode);
   };
 
   return (
@@ -83,7 +93,9 @@ function DonationForm() {
               </h1>
 
               <form
-                onSubmit={form.handleSubmit(onSubmit)}
+                onSubmit={onSubmit}
+                method="POST"
+                // onSubmit={form.handleSubmit(onSubmit)}
                 className="space-y-6"
               >
                 <div className="mb-6">
@@ -149,7 +161,6 @@ function DonationForm() {
                       </p>
                     )}
                   </div>
-                  <CountrySelector/>
                   <div className="mt-4">
                     <label
                       htmlFor="phone"
@@ -157,18 +168,28 @@ function DonationForm() {
                     >
                       Phone number
                     </label>
-                    <input
-                      type="phone"
-                      id="phone"
-                      {...form.register("phone")}
-                      className="w-full outline-none bg-neutral-500/90 rounded-lg border py-2 px-3 dark:bg-gray-700 dark:text-white dark:border-none"
-                    />
+                    <div className="flex">
+                      <CountrySelector onCountryChange={handleCountryChange} />
+                      <input
+                        type="text"
+                        value={dialCode}
+                        readOnly
+                        className="w-1/5 outline-none bg-neutral-500/90 rounded-lg border py-2 px-3 dark:bg-gray-700 dark:text-white dark:border-none"
+                      />
+                      <input
+                        type="text"
+                        id="phone"
+                        {...form.register("phone")}
+                        className="w-4/5 outline-none mx-2 bg-neutral-500/90 rounded-lg border py-2 px-3 dark:bg-gray-700 dark:text-white dark:border-none"
+                      />
+                    </div>
                     {form.formState.errors.phone && (
                       <p className="text-red-500">
                         {form.formState.errors.phone.message}
                       </p>
                     )}
                   </div>
+                  {/* <CountrySelector onCountryChange={handleCountryChange} /> */}
                   <div className="mt-4">
                     <label
                       htmlFor="address"
@@ -248,7 +269,7 @@ function DonationForm() {
                       </p>
                     )}
                   </div>
-                  <div className="mt-4">
+                  {/* <div className="mt-4">
                     <label
                       htmlFor="currency"
                       className="block text-white dark:text-white mb-1"
@@ -266,7 +287,7 @@ function DonationForm() {
                         {form.formState.errors.currency.message}
                       </p>
                     )}
-                  </div>
+                  </div> */}
                 </div>
 
                 <div className="mt-8 flex flex-col-reverse gap-y-4 md:gap-y-0 md:flex-row items-center justify-evenly">

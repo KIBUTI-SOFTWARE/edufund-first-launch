@@ -9,9 +9,9 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  server: {
-    host: '0.0.0.0'
-  },
+  // server: {
+  //   host: '0.0.0.0'
+  // },
   test: {
     globals: true,
     environment: 'jsdom',

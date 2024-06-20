@@ -1,5 +1,6 @@
 import { toast } from "sonner"
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
+export const BASE_URL = "https://edufunddash.kibuti.co.tz/api/card-payment";
 
 export const testimonials = [
   {
