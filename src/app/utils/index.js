@@ -61,7 +61,6 @@ export const faqs = [
     answer: "Contact us with this email: partnership@edufunds.co"
   }
 ];
-
 export const data = [
   {
     goal: 400,

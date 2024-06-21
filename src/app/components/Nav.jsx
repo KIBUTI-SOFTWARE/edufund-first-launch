@@ -5,11 +5,11 @@ import { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const navigation = [
-  { name: "Apply Now", href: "/apply" },
   { name: "About us", href: "/About" },
   // { name: "Products", href: "/donate" },
   { name: "Donate", href: "/donation" },
   { name: "Reports", href: "/reports" },
+  { name: "Apply Now", href: "/apply" },
   // { name: "Fundraiser", href: "/fundraiser" },
 ];
 function Nav() {
