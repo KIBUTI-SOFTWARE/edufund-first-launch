@@ -49,16 +49,14 @@ function DonationForm() {
       postalCode: formData.postalCode,
     };
 
-    const headers = {
-      "Content-Type": "application/json",
-    };
+    // const headers = {
+    //   "Content-Type": "application/json",
+    // };
 
     try {
       const response = await axios.post(BASE_URL, JSON.stringify(data));
       window.location.href = response.data.data.paymentUrl;
-      alerter(
-        "Thank you for your pledge. You can redeem your pledge through this payment link."
-      );
+      alerter("You'll be redirect to a payment page");
       console.log("The response is: ", response);
     } catch (error) {
       alerter("Error submitting the form. Please try again.");

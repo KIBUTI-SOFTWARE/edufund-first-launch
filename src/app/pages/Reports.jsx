@@ -121,11 +121,11 @@ export function Card() {
   ];
 
   return (
-    <section className="pt-20">
+    <section className="pt-20 relative">
       <h1 className="text-center font-semibold font-kingshare text-xl lg:text-3xl text-white">
         Selection Criteria
       </h1>
-      <div className="h-full max-h-screen w-full pt-12 p-4">
+      <div className="h-full w-full pt-12 p-4">
         <div className="grid gap-14 md:grid-cols-3 md:gap-5">
           {criteria.map((criterion, index) => (
             <div
@@ -581,20 +581,20 @@ export function BentoBox() {
 
 export function Chart() {
   return (
-    <div className="pt-16 md:pt-8">
-      <div className="min-h-screen flex flex-col p-8 sm:p-16 md:p-24 justify-center backdrop-blur-sm">
+    <div className="">
+          <h2 className="leading-tight text-4xl text-center font-kingshare my-2 text-white font-bold">
+            Snapshot of our scholarship fund report
+          </h2>
+      <div className=" flex flex-col p-8 sm:p-16 md:p-24 justify-center backdrop-blur-sm">
         <div data-theme="teal" className="mx-auto max-w-6xl">
           <h2 className="sr-only">Featured reports</h2>
           <section className="font-sans text-black">
-            <div className="[ lg:flex lg:items-center ] [ fancy-corners fancy-corners--large fancy-corners--top-left fancy-corners--bottom-right ]">
+            <div className="[ lg:flex lg:items-center ]">
               <div className="w-[100%] ml-[10%] md:ml-0 lg:w-[120em]">
                 <PieChart />
               </div>
               <div className="p-6 bg-grey">
                 <div className="leading-relaxed">
-                  <h2 className="leading-tight text-4xl text-white font-bold">
-                    Snapshot of our scholarship fund report
-                  </h2>
                   <p className="mt-4 text-slate-100">
                     We'are grateful to all education champions that are
                     supporting and donating to our mission of bringing quality

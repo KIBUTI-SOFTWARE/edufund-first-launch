@@ -45,7 +45,7 @@ const PieChart = () => {
   }, []);
 
   return (
-    <div className="w-2/3 h-screen flex items-center justify-center">
+    <div className="w-3/4 md:w-1/2  flex items-center justify-center">
       <canvas ref={chartRef} />
     </div>
   );
