@@ -328,3 +328,17 @@ export const countries = [
   { name: "Zambia", code: "ZM", dialCode: "+260" },
   { name: "Zimbabwe", code: "ZW", dialCode: "+263" },
 ];
+export function trimLeadingZero(phoneNumber) {
+  if (phoneNumber.startsWith("0")) {
+    return phoneNumber.substring(1);
+  } else {
+    return phoneNumber;
+  }
+}
+export function trimLeadingPlus(dialCode) {
+  if (dialCode.startsWith("+")) {
+    return dialCode.substring(1);
+  } else {
+    return dialCode;
+  }
+}

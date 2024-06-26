@@ -6,11 +6,11 @@ import { NavLink } from "react-router-dom";
 
 const navigation = [
   { name: "About us", href: "/About" },
-  // { name: "Products", href: "/donate" },
+  { name: "Products", href: "/donate" },
   { name: "Donate", href: "/donation" },
   { name: "Reports", href: "/reports" },
   { name: "Apply Now", href: "/apply" },
-  // { name: "Fundraiser", href: "/fundraiser" },
+  { name: "Fundraiser", href: "/fundraiser" },
 ];
 function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -24,13 +24,13 @@ function Nav() {
   const getGreetingAndIcon = () => {
     const hours = new Date().getHours();
     if (hours < 12) {
-      return { greeting: "Good Morning", icon: "☀️" };  
+      return { greeting: "Good Morning", icon: "☀️" };
     } else if (hours < 18) {
-      return { greeting: "Good Afternoon", icon: "🌤️" }; 
+      return { greeting: "Good Afternoon", icon: "🌤️" };
     } else if (hours < 21) {
-      return { greeting: "Good Evening", icon: "🌇" }; 
+      return { greeting: "Good Evening", icon: "🌇" };
     } else {
-      return { greeting: "Good Night", icon: "🌙" }; 
+      return { greeting: "Good Night", icon: "🌙" };
     }
   };
 

@@ -46,10 +46,10 @@ function Home() {
           <Team />
           {/* <ProfileCard/> */}
           {/* <Testimonials /> */}
-          <Gallery />
+          {/* <Gallery /> */}
           {/* <Form /> */}
           {/* <Form2 /> */}
-          <Partners />
+          {/* <Partners /> */}
           <Faqs />
           {/* <DrawerDemo/> */}
           <Footer />

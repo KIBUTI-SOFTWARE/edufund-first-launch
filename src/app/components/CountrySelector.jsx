@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState,useEffect } from "react";
 import { countries } from "../utils/index";
 // List of 120 countries with their codes and dial codes
 // const countries = [
@@ -198,20 +198,38 @@ import { countries } from "../utils/index";
 // ];
 
 const CountrySelector = ({ onCountryChange }) => {
-  const handleCountryChange = (event) => {
-    const selectedCountry = countries.find(
+  // const [selectedCountry, setSelectedCountry] = useState(countries[0]);
+  // const [code, setCode] = useState("");
+  // const handleCountryChange = (event) => {
+  //   const country = countries.find(
+  //     (country) => country.code === event.target.value
+  //   );
+  //   setSelectedCountry(country);
+  // };
+  const [selectedCountry, setSelectedCountry] = useState(countries[0]);
+
+  useEffect(() => {
+    if (selectedCountry) {
+      onCountryChange(selectedCountry);
+    }
+  }, [selectedCountry, onCountryChange]);
+
+  const handleChange = (event) => {
+    const country = countries.find(
       (country) => country.code === event.target.value
     );
-    onCountryChange(selectedCountry.dialCode, selectedCountry.code);
+    if (country) {
+      setSelectedCountry(country);
+    }
   };
-
   return (
     <div>
       {/* <label htmlFor="country">Select your country: </label> */}
       <select
         id="country"
-        onChange={handleCountryChange}
-        className="w-32 mx-2 outline-none bg-neutral-500/90 rounded-lg border py-2 px-3 dark:bg-gray-700 dark:text-white dark:border-none"
+        value={selectedCountry.code}
+        onChange={handleChange}
+        className="bg-neutral-600 h-[42px] rounded-lg border border-white"
       >
         {countries.map((country) => (
           <option key={country.code} value={country.code}>
@@ -219,6 +237,10 @@ const CountrySelector = ({ onCountryChange }) => {
           </option>
         ))}
       </select>
+      {/* <div>
+        <p>Country Code: {selectedCountry.code}</p>
+        <p>Dial Code: {selectedCountry.dialCode}</p>
+      </div> */}
     </div>
   );
 };
