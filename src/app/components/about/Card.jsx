@@ -131,8 +131,8 @@ function Card() {
             What we do
           </h2>
           <p className="mx-auto my-4 w-full max-w-xl bg-transparent text-center font-medium leading-relaxed tracking-wide text-gray-400">
-            We are on a mission to creating a productive workforce for Africa,
-            by enabling every young person access decent level of education
+            We are on a mission to create a productive workforce for Africa,
+            by enabling every young person access to a decent level of education
             through our community financing solutions.
           </p>
         </div>

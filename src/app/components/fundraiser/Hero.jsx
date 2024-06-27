@@ -5,11 +5,11 @@ function Hero() {
     <div className="h-screen  bg-pattern bg-gradient-to-b from-blue-900 to-blue-600 flex items-center">
       <section
         className="w-full bg-cover bg-center py-32"
-        style={{
-          backgroundImage:
-            "url('https://plus.unsplash.com/premium_photo-1683134563505-cc5d4f20a22a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8ZnVuZHJhaXNlcnxlbnwwfHwwfHx8MA%3D%3D')",
-          backgroundBlendMode: "overlay",
-        }}
+        // style={{
+        //   backgroundImage:
+        //     "url('https://plus.unsplash.com/premium_photo-1683134563505-cc5d4f20a22a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8ZnVuZHJhaXNlcnxlbnwwfHwwfHx8MA%3D%3D')",
+        //   backgroundBlendMode: "overlay",
+        // }}
       >
         <div className="container mx-auto text-center text-white">
           <h1 className="text-5xl font-medium mb-6">Support Our Cause</h1>

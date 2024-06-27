@@ -96,7 +96,7 @@ export function Services() {
     {
       title: "Co-Creation of Scholarship Programme",
       description:
-        "EduFund works with partner institutions and corporates to envision, design and implement relevant,inclusive scholarship programmes, fully tailored to achieve our partner’ s objectives and expected results.",
+        "EduFund works with partner institutions and corporates to envision, design and implement relevant,inclusive scholarship programmes, tailored to achieve our partner’ s objectives and expected results.",
       icon: (
         <svg
           stroke="currentColor"
@@ -120,7 +120,7 @@ export function Services() {
     {
       title: "Set-up Dedicated Scholarship Platform",
       description:
-        "EduFund will set up a dedicated platform for the partners to manage the entire scholarship delivery value chain. Targeted students will apply to the scholarship through thewhite label platform",
+        "EduFund will set up a dedicated platform for the partners to manage the entire scholarship delivery value chain. Targeted students will apply to the scholarship through the white label platform",
       icon: (
         <svg
           stroke="currentColor"
@@ -144,7 +144,7 @@ export function Services() {
     {
       title: "Student Recruitment and Matching to Universities",
       description:
-        "EduFund provides our partners with data centric application assessment tool, to aid partners in theselection process. Preselectstudents will be vetted andmatched to relevantuniversities through EduFund",
+        "EduFund provides our partners with data centric application assessment tool, to aid partners in the selection process. Preselected students will be vetted and matched to relevant universities through EduFund",
       icon: (
         <svg
           stroke="currentColor"
@@ -168,7 +168,7 @@ export function Services() {
     {
       title: "Fund Disbursement to Universities",
       description:
-        "Upon completing admission processes, the partner will disburse required fees (coveringstudents tuition, accommodation and otherschool related fees) to the university directly,to ensure the fund is used for the right course.Partners will also receive a summeryscholarship report and recommendations",
+        "Upon completing admission processes, the partner will disburse required fees (covering students tuition, accommodation and other school related fees) to the university directly,to ensure the fund is used for the right course.Partners will also receive a summary scholarship report and recommendations",
       icon: (
         <svg
           stroke="currentColor"
